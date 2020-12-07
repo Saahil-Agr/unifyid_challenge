@@ -1,5 +1,5 @@
 # unifyid_challenge
-Instructions to run the code:
+Instructions to run the code:<br />
 Requirements: To successsfully run the code the following packages are required:
 1. Pandas
 2. Numpy
@@ -18,13 +18,13 @@ has to be run directly in test mode using the pre trained model. Currently this 
 Answers to the questions asked in the challenge are given along with the code in the jupyter notebook markdown format.
 
 ## Additional Questions
-1. If you had one additional day, what would you change or improve to your submission?
+1. If you had one additional day, what would you change or improve to your submission? <br />
 First of all I would complete the run.py so that the train data and test data urls could be changed and read by the system accordingly. Secondly ability to run the system in test mode directly if the training has already been done.
 I would improve the model architecture and try using LSTM. Currently in feature extraction I have deleted all the backspaces and the actual mistakes. This information could be used by using an LSTM which would find richer relationships between the different mistakes made and the time required.
 Some of the other baseline models that I would try with the existing features are: svm, logistic regression for multi-class to gain more insights into basic relationships in the data.
 
-2. How would you modify your solution if the number of users was 1,000 times larger?
+2. How would you modify your solution if the number of users was 1,000 times larger?<br />
 If the number of users were 1000x larger than the current softmax solution would pose significant challenges. In this case I would change the loss function to negative sampling instead of softmax crossentropy to reduce the computational complexity on the final layer. 
 
-3. What insights and takeaways do you have on the distribution of user performance?
+3. What insights and takeaways do you have on the distribution of user performance?<br />
 While the model performs extremely well on some users, there is a significant percentage of users for use the model basically learns nothing. I would further analyse this by looking into the distribution of overall typing time and number of bacckspaces used per user to gain an insight if it has any correlation. 
